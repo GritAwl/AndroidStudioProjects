@@ -1,0 +1,39 @@
+For this homework, let's build on homework1 using ListView.
+Create an app that displays the 50 States in a ListView.
+The rows must have the following layout:
+    - State name, <square 1> <square 2>
+
+- Each row must contain two colored squares, each color selected randomly.
+- The rows must have an alternating background,
+with all odd numbered row having the same color,
+and all even numbered rows having a different color from the odd rows.
+
+Hint: use a background color for the rows with an alpha property.
+The alpha property can be part of the HEX color value by adding the
+appropriate digits to the beginning of the HEX value. In Android,
+the following is a list of the appropriate alpha values for colors:
+    Hex Opacity Values
+		100% — FF
+		95% — F2
+		90% — E6
+		85% — D9
+		80% — CC
+		75% — BF
+		70% — B3
+		65% — A6
+		60% — 99
+		55% — 8C
+		50% — 80
+		45% — 73
+		40% — 66
+		35% — 59
+		30% — 4D
+		25% — 40
+		20% — 33
+		15% — 26
+		10% — 1A
+		5% — 0D
+		0% — 00
+Hence, a color of red (#FF0000) with a 20% alpha
+will be #33FF0000 <= see 33 corresponding to 20% appended as prefix.
+Each row must be at least 64dp in height.
