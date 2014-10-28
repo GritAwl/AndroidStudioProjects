@@ -2,6 +2,7 @@ package com.kekwanu.androidlistviewexample;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -12,8 +13,12 @@ import java.util.Arrays;
 
 public class MainActivity extends Activity {
 
+    private String TAG = "HW2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Log.i(TAG, "MainActivity::onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -39,7 +44,7 @@ public class MainActivity extends Activity {
         //I just prefer to work with ArrayList objects. Any Array type is fine.
         ArrayList statesList = new ArrayList<String>(Arrays.asList(states));
 
-        //Optimized adapter. See definition of the OptimizedCustomAdapter class, which exends a BaseAdapter
+        //Optimized adapter. See definition of the OptimizedCustomAdapter class, which extends a BaseAdapter
         //pass in a context reference. You get a reference o the context in an Activity class by simply using "this".
         OptimizedCustomAdapter adapter = new OptimizedCustomAdapter(this,statesList);
 
@@ -50,6 +55,8 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        Log.i(TAG, "MainActivity::onCreateOptionsMenu()");
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -57,6 +64,8 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        Log.i(TAG, "MainActivity::onOptionsItemSelected()");
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
