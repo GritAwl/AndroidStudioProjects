@@ -1,4 +1,4 @@
-package com.android.homework2;
+package com.kekwanu.androidlistviewexample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

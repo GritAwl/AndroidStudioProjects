@@ -1,4 +1,4 @@
-For this homework, let's build on Homework1 using ListView.
+For this homework, let's build on homework1 using ListView.
 Create an app that displays the 50 States in a ListView.
 The rows must have the following layout:
     - State name, <square 1> <square 2>
@@ -34,7 +34,6 @@ the following is a list of the appropriate alpha values for colors:
 		10% — 1A
 		5% — 0D
 		0% — 00
-
 Hence, a color of red (#FF0000) with a 20% alpha
 will be #33FF0000 <= see 33 corresponding to 20% appended as prefix.
-[X] Each row must be at least 64dp in height.
+Each row must be at least 64dp in height.
