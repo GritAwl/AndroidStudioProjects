@@ -85,7 +85,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
             LayoutInflater inflater = LayoutInflater.from(context);
 
             //use the inflate method this way.
-            convertView = inflater.inflate(R.layout.beautiful_layout_item, viewGroup, false);
+            convertView = inflater.inflate(R.layout.beautiful_layout_item, viewGroup,
+                    false);
 
             //create the viewHolder object, which serves as a sort of "cache"
             // of the view
@@ -100,6 +101,10 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 
             //  Store the ViewHolder with the View.
             convertView.setTag(viewHolder);
+
+            ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
+            ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
+
         }
 
         /**
@@ -117,8 +122,20 @@ public class OptimizedCustomAdapter extends BaseAdapter {
          * The background color of the squares is changed every time the
          * ListView scrolls. Is this within the bounds of the project specifications?
          */
-        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
-        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
+//        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
+//        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
+
+        /**
+         * TODO:
+         * Below is experimental code for setting the background color of each row.
+         */
+//        int evenRowColor = makeRandomColor();
+//        int oddRowColor = makeRandomColor();
+//        if (position % 2 == 0) {
+//            viewGroup.setBackgroundColor(evenRowColor);
+//        } else {
+//            viewGroup.setBackgroundColor(oddRowColor);
+//        }
 
         return convertView;
     }
