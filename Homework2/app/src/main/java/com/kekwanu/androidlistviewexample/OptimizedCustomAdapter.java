@@ -23,10 +23,21 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     private Activity activity;
     private Context context;
 
+    private int[] sq1Colors;
+    private int[] sq2Colors;
+
     public OptimizedCustomAdapter(Context context, ArrayList objects) {
         Log.i(TAG, "::OptimizedCustomAdapter(context, objects)");
         this.context = context;
         this.states  = objects;
+
+        sq1Colors = new int[states.size()];
+        sq2Colors = new int[states.size()];
+
+        for (int i = 0; i < sq1Colors.length; i++) {
+            sq1Colors[i] = makeRandomColor();
+            sq2Colors[i] = makeRandomColor();
+        }
     }
 
     //define the Holder pattern class
@@ -34,6 +45,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     /**
      * This is our ViewHolder, which is based after the "holder pattern" class.
      * It is used to cache the TextView.
+     *
+     * It should also be used to cache the color of the two squares, the Views.
      */
     static class ViewHolder{
 //        android.util.Log.i("HW2", "::ViewHolder internal class definition");
@@ -72,6 +85,12 @@ public class OptimizedCustomAdapter extends BaseAdapter {
          * Currently this method returns zero (0) for everything. Is that the desired
          * return for any input?
          */
+
+        /**
+         * TODO:
+         * Also note that this method is never called from this class,
+         * but there is one call in MainActivity.onOptionsItemSelected(item).
+         */
         return 0;
     }
 
@@ -89,7 +108,19 @@ public class OptimizedCustomAdapter extends BaseAdapter {
          * recycle the row layout, so when convertView is non-null, update
          * its contents instead of inflating a new row layout.
          */
+
+        /**
+         * If no view is given to us, create one.
+         * Don't put data into the views here, just specify how to find the views.
+         */
         if (convertView == null){ //the first time around, the view is null, so inflate it
+
+            /**
+             * From The Big Nerd Ranch Guide, page 16:
+             * When a layout is inflated, each widget in the layout file is
+             * instantiated as defined by its attributes. You specify which layout to
+             * inflate by passing the layout's resource ID.
+             */
 
             //inflate using the system inflater. This returns a reference to the inflater,
             // which inflates the resource XML to the corresponding view
@@ -113,8 +144,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
             //  Store the ViewHolder with the View.
             convertView.setTag(viewHolder);
 
-            ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
-            ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
+//            ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
+//            ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
 
         }
 
@@ -127,6 +158,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
         viewHolder.state.setText(getItem(position));
 
         ((ViewHolder) convertView.getTag()).state.setText(getItem(position));
+        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(sq1Colors[position]);
+        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(sq2Colors[position]);
 
         /**
          * TODO:

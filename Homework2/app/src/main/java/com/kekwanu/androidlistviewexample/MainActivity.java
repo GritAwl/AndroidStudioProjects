@@ -45,7 +45,6 @@ public class MainActivity extends Activity {
                 "Virginia", "Washington", "West Virginia", "Wisconsin",
                 "Wyoming"};
 
-
         //I just prefer to work with ArrayList objects. Any Array type is fine.
         ArrayList statesList = new ArrayList<String>(Arrays.asList(states));
 
