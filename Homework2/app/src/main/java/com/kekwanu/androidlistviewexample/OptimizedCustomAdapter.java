@@ -18,14 +18,13 @@ import java.util.Random;
  */
 public class OptimizedCustomAdapter extends BaseAdapter {
 
-    private String TAG = "HW2";
+    private String TAG = "HW2::OptimizedCustomAdapter";
     private ArrayList<String> states;
     private Activity activity;
     private Context context;
 
     public OptimizedCustomAdapter(Context context, ArrayList objects) {
-
-        Log.i(TAG, "OptimizedCustomAdapter::OptimizedCustomAdapter()");
+        Log.i(TAG, "::OptimizedCustomAdapter(context, objects)");
         this.context = context;
         this.states  = objects;
     }
@@ -33,40 +32,52 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     //define the Holder pattern class
 
     /**
-     * This is our ViewHolder.
+     * This is our ViewHolder, which is based after the "holder pattern" class.
      * It is used to cache the TextView.
      */
     static class ViewHolder{
+//        android.util.Log.i("HW2", "::ViewHolder internal class definition");
         TextView state;
+
+        /**
+         * TODO:
+         * Not sure if the following should be here or not. See getCount()
+         * immediately below, as it only returns the size of the states
+         * ArrayList.
+         *
+         * The getView() method below accesses these, so I must have them for now.
+         */
         View square1;
         View square2;
     }
 
     @Override
     public int getCount() {
-
-        Log.i(TAG, "OptimizedCustomAdapter::getCount()");
+        Log.i(TAG, "::getCount()");
         return states.size();
     }
 
     @Override
     public String getItem(int position) {
-
-        Log.i(TAG, "OptimizedCustomAdapter::getItem()");
+        Log.i(TAG, "::getItem(position)");
         return states.get(position);
     }
 
     @Override
     public long getItemId(int position) {
+        Log.i(TAG, "::getItemId(position)");
 
-        Log.i(TAG, "OptimizedCustomAdapter::getItemId()");
+        /**
+         * TODO:
+         * Currently this method returns zero (0) for everything. Is that the desired
+         * return for any input?
+         */
         return 0;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup){
-
-        Log.i(TAG, "OptimizedCustomAdapter::getView(), " +
+        Log.i(TAG, "::getView(position, convertView, viewGroup), " +
                         "and position = " + position);
 
         ViewHolder viewHolder;

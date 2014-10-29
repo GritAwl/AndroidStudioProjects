@@ -13,12 +13,17 @@ import java.util.Arrays;
 
 public class MainActivity extends Activity {
 
-    private String TAG = "HW2";
+    private String TAG = "HW2::MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "::onCreate(savedInstanceState)");
 
-        Log.i(TAG, "MainActivity::onCreate()");
+        /**
+         * TODO:
+         * Should double-check that Log.i() calls can be before calls to the super
+         * constructor.
+         */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -55,8 +60,8 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.i(TAG, "::onCreateOptionsMenu(menu)");
 
-        Log.i(TAG, "MainActivity::onCreateOptionsMenu()");
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -64,8 +69,8 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i(TAG, "::onOptionsItemSelected(ite)");
 
-        Log.i(TAG, "MainActivity::onOptionsItemSelected()");
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
