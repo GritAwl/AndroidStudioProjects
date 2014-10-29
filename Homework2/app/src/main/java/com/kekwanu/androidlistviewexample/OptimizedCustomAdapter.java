@@ -26,6 +26,9 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     private int[] sq1Colors;
     private int[] sq2Colors;
 
+    private int evenRowColor;
+    private int oddRowColor;
+
     public OptimizedCustomAdapter(Context context, ArrayList objects) {
         Log.i(TAG, "::OptimizedCustomAdapter(context, objects)");
         this.context = context;
@@ -38,6 +41,9 @@ public class OptimizedCustomAdapter extends BaseAdapter {
             sq1Colors[i] = makeRandomColor();
             sq2Colors[i] = makeRandomColor();
         }
+
+        evenRowColor = makeRandomColor();
+        oddRowColor = makeRandomColor();
     }
 
     //define the Holder pattern class
@@ -62,6 +68,7 @@ public class OptimizedCustomAdapter extends BaseAdapter {
          */
         View square1;
         View square2;
+        ViewGroup rowView;
     }
 
     @Override
@@ -96,11 +103,9 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup){
-        Log.i(TAG, "::getView(position, convertView, viewGroup), " +
-                        "and position = " + position);
+        Log.i(TAG, "::getView(position, convertView, viewGroup), " + "and position = " + position);
 
         ViewHolder viewHolder;
-//        ListView rows = (ListView)findViewById(R.id.listview);
 
         /**
          * The convertView parameter is a "scrap-view".
@@ -140,13 +145,10 @@ public class OptimizedCustomAdapter extends BaseAdapter {
             viewHolder.state = (TextView) convertView.findViewById(R.id.state);
             viewHolder.square1 = (View) convertView.findViewById(R.id.square1);
             viewHolder.square2 = (View) convertView.findViewById(R.id.square2);
+            viewHolder.rowView = (ViewGroup) convertView.findViewById(R.id.row);
 
             //  Store the ViewHolder with the View.
             convertView.setTag(viewHolder);
-
-//            ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
-//            ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
-
         }
 
         /**
@@ -161,25 +163,11 @@ public class OptimizedCustomAdapter extends BaseAdapter {
         ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(sq1Colors[position]);
         ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(sq2Colors[position]);
 
-        /**
-         * TODO:
-         * The background color of the squares is changed every time the
-         * ListView scrolls. Is this within the bounds of the project specifications?
-         */
-//        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(makeRandomColor());
-//        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(makeRandomColor());
-
-        /**
-         * TODO:
-         * Below is experimental code for setting the background color of each row.
-         */
-//        int evenRowColor = makeRandomColor();
-//        int oddRowColor = makeRandomColor();
-//        if (position % 2 == 0) {
-//            viewGroup.setBackgroundColor(evenRowColor);
-//        } else {
-//            viewGroup.setBackgroundColor(oddRowColor);
-//        }
+        if (position % 2 == 0) {
+            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(evenRowColor);
+        } else {
+            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(oddRowColor);
+        }
 
         return convertView;
     }
