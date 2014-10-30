@@ -1,9 +1,10 @@
 package com.android.homework3;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +13,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //  Get a reference to the GridView object.
+        GridView grid = (GridView) findViewById(R.id.gridView);
+
+        //
     }
 
 
