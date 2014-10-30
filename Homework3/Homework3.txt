@@ -1,5 +1,5 @@
-As instructed in class, for homework 3, let's build on homework2.
-For this homework, repeat homework2, but display the data in a GridView of four columns.
+As instructed in class, for homework 3, let's build on homework 2.
+For this homework, repeat homework 2, but display the data in a GridView of four columns.
 The view must occupy the entire width of the screen (minus edge paddings or margins).
 Style each grid to your satisfaction.
 

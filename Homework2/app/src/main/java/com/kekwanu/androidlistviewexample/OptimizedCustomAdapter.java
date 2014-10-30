@@ -101,6 +101,13 @@ public class OptimizedCustomAdapter extends BaseAdapter {
         return 0;
     }
 
+    /**
+     * Note that when implementing getView(), do not make any assumptions about the
+     * order of the calls to getView(). Android may call getView() on all of your View
+     * types that are currently on the screen in arbitrary order, such as from the bottom
+     * of the screen to the top or from the top of the screen to the bottom.
+     */
+
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup){
         Log.i(TAG, "::getView(position, convertView, viewGroup), " + "and position = " + position);
@@ -175,6 +182,11 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     /**
      * This method randomly generates an alpha/transparency value along with an RGB value.
      * @return The integer color value in AARRGGBB format.
+     *
+     * This is a static method inside of the OptimizedCustomAdapter class. Making this
+     * method static inside of this class just makes it so that this method is only
+     * callable from inside of this class. This method is not exposed to clients of
+     * this class. This is referred to as a static nested class.
      */
     static int makeRandomColor() {
         String TAG = "HW2";
