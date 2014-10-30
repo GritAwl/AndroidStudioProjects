@@ -1,0 +1,17 @@
+As instructed in class, for homework 3, let's build on homework2.
+For this homework, repeat homework2, but display the data in a GridView of four columns.
+The view must occupy the entire width of the screen (minus edge paddings or margins).
+Style each grid to your satisfaction.
+
+PS: I'd encourage you to begin practicing how to style views and layouts.
+This is an important UI development aspect.
+For this homework:
+	use background colors in each cell, possibly random colors
+	change the text color of the state TextView
+		choose a color that looks good on the background color of it's cell
+
+For inspiration, go to the Google Play Store and download the Google I/O 2014 app.
+Browse through the app, click on all the menu items,
+and see the use of bright colors on their ListViews and GridViews.
+Also observe how the padding, and margins, and their use of white spaces.
+Try to emulate in homework3.

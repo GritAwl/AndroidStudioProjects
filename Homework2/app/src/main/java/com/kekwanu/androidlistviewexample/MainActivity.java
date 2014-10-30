@@ -10,21 +10,16 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
 public class MainActivity extends Activity {
 
     private String TAG = "HW2::MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         Log.i(TAG, "::onCreate(savedInstanceState)");
 
-        /**
-         * TODO:
-         * Should double-check that Log.i() calls can be before calls to the super
-         * constructor.
-         */
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //get reference to ListView object
@@ -56,7 +51,6 @@ public class MainActivity extends Activity {
         list.setAdapter(adapter);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.i(TAG, "::onCreateOptionsMenu(menu)");
@@ -77,6 +71,7 @@ public class MainActivity extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }
