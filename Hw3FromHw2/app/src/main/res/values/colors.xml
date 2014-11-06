@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <color name="redWith50PercentAlpha">#66FF0000</color>
+        <color name="greenWith50PercentAlpha">#6600FF00</color>
+        <color name="blueWith50PercentAlpha">#660000FF</color>
+        <color name="blackWith50PercentAlpha">#66000000</color>
+    </resources>

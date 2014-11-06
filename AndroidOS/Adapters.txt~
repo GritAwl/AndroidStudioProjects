@@ -1,0 +1,10 @@
+The information below is taken from:
+http://www.piwai.info/android-adapter-good-practices/#ArrayAdapter-sucks
+
+Standard way to display a list of items is to use a ListView with a ListAdapter. The ListView draws the visible items, and the ListAdapter gives the ListView the View corresponding to each item. This is to create only the required number of views needed to fill the screen, and to reuse these views as soon as they disappear.
+
+Below are some various ListAdapter patterns and best practices:
+
+
+
+
