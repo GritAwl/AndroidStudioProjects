@@ -104,100 +104,99 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 
     /**
      * This is a naive implementation of getView().
-     * The original implementation with the ViewHolder pattern is below.
+     * The original implementation with the ViewHolder pattern is below this method.
      */
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
         View rootView = LayoutInflater.from(context).inflate(R.layout
                 .beautiful_layout_item, viewGroup, false);
 
-/*
-        GridView gridView = (GridView) rootView.findViewById(R.id.gridView);
-        gridView.setBackgroundColor(makeRandomColor());
 
-*/
+        TextView textView = (TextView) rootView.findViewById(R.id.state);
+        textView.setText(states.get(position));
+
         return rootView;
     }
 
-/*    @Override
-    public View getView(int position, View convertView, ViewGroup viewGroup){
-        Log.i(TAG, "::getView(position, convertView, viewGroup), " + "and position = " + position);
-
+//    @Override
+//    public View getView(int position, View convertView, ViewGroup viewGroup){
+//        Log.i(TAG, "::getView(position, convertView, viewGroup), " + "and position = " + position);
+//
 //        ViewHolder viewHolder;
-
-        *//**
-         * The convertView parameter is a "scrap-view".
-         * It has a non-null value when the ListView is asking you to
-         * recycle the row layout, so when convertView is non-null, update
-         * its contents instead of inflating a new row layout.
-         *//*
-
-        *//**
-         * If no view is given to us, create one.
-         * Don't put data into the views here, just specify how to find the views.
-         *//*
-*//*
-        if (convertView == null){ //the first time around, the view is null, so inflate it
-
-            *//*
-*//**
-             * From The Big Nerd Ranch Guide, page 16:
-             * When a layout is inflated, each widget in the layout file is
-             * instantiated as defined by its attributes. You specify which layout to
-             * inflate by passing the layout's resource ID.
-             *//**//*
-
-
-            //inflate using the system inflater. This returns a reference to the inflater,
-            // which inflates the resource XML to the corresponding view
-            LayoutInflater inflater = LayoutInflater.from(context);
-
-            //use the inflate method this way.
-            convertView = inflater.inflate(R.layout.beautiful_layout_item, viewGroup,
-                    false);
-
-            //create the viewHolder object, which serves as a sort of "cache"
-            // of the view
-            //this is a highly optimized way of dealing with ListViews on Android
-            //if this is not done, every time you scroll through a ListView, the Android system
-            //will continue to inflate and destroy the view, wasting valuable resources, and the result will be
-            //laggy scrolling.
-            viewHolder = new ViewHolder();
-*//*
-*//*
-            viewHolder.state = (TextView) convertView.findViewById(R.id.state);
-            viewHolder.square1 = (View) convertView.findViewById(R.id.square1);
-            viewHolder.square2 = (View) convertView.findViewById(R.id.square2);
-            viewHolder.rowView = (ViewGroup) convertView.findViewById(R.id.row);
-*//**//*
-
-
-            //  Store the ViewHolder with the View.
-            convertView.setTag(viewHolder);
-        }
-*//*
-
-        *//**
-         * We avoided calling findViewById() on the resource,
-         * so just use the ViewHolder.
-         *//*
-
-*//*        viewHolder = (ViewHolder) convertView.getTag();
-        viewHolder.state.setText(getItem(position));
-
-        ((ViewHolder) convertView.getTag()).state.setText(getItem(position));
-        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(sq1Colors[position]);
-        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(sq2Colors[position]);
-
-        if (position % 2 == 0) {
-            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(evenRowColor);
-        } else {
-            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(oddRowColor);
-        }*//*
-
-//        return convertView;
-        return viewGroup;
-    }*/
+//
+//        /**
+//         * The convertView parameter is a "scrap-view".
+//         * It has a non-null value when the ListView is asking you to
+//         * recycle the row layout, so when convertView is non-null, update
+//         * its contents instead of inflating a new row layout.
+//         */
+//
+//        /**
+//         * If no view is given to us, create one.
+//         * Don't put data into the views here, just specify how to find the views.
+//         */
+//
+//        if (convertView == null){ //the first time around, the view is null, so inflate it
+//
+//
+//            /**
+//             * From The Big Nerd Ranch Guide, page 16:
+//             * When a layout is inflated, each widget in the layout file is
+//             * instantiated as defined by its attributes. You specify which layout to
+//             * inflate by passing the layout's resource ID.
+//             */
+//
+//            //inflate using the system inflater. This returns a reference to the inflater,
+//            // which inflates the resource XML to the corresponding view
+//            LayoutInflater inflater = LayoutInflater.from(context);
+//
+//            //use the inflate method this way.
+//            convertView = inflater.inflate(R.layout.beautiful_layout_item, viewGroup,
+//                    false);
+//
+//            //create the viewHolder object, which serves as a sort of "cache"
+//            // of the view
+//            //this is a highly optimized way of dealing with ListViews on Android
+//            //if this is not done, every time you scroll through a ListView, the Android system
+//            //will continue to inflate and destroy the view, wasting valuable resources, and the result will be
+//            //laggy scrolling.
+//            viewHolder = new ViewHolder();
+//
+//
+//            viewHolder.state = (TextView) convertView.findViewById(R.id.state);
+//            viewHolder.square1 = (View) convertView.findViewById(R.id.square1);
+//            viewHolder.square2 = (View) convertView.findViewById(R.id.square2);
+//            viewHolder.rowView = (ViewGroup) convertView.findViewById(R.id.row);
+//
+//
+//
+//            //  Store the ViewHolder with the View.
+//            convertView.setTag(viewHolder);
+//        }
+//
+//
+//        /**
+//         * We avoided calling findViewById() on the resource,
+//         * so just use the ViewHolder.
+//         */
+//
+//
+//        viewHolder = (ViewHolder) convertView.getTag();
+//        viewHolder.state.setText(getItem(position));
+//
+//        ((ViewHolder) convertView.getTag()).state.setText(getItem(position));
+//        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(sq1Colors[position]);
+//        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(sq2Colors[position]);
+//
+//        if (position % 2 == 0) {
+//            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(evenRowColor);
+//        } else {
+//            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(oddRowColor);
+//        }
+//
+////        return convertView;
+//        return viewGroup;
+//    }
 
     /**
      * This method randomly generates an alpha/transparency value along with an RGB value.
