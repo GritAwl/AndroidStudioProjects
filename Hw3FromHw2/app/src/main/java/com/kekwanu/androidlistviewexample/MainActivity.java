@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
+import android.widget.GridView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,8 +22,12 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        GridView grid = (GridView)findViewById(R.id.gridView);
+/*
         //get reference to ListView object
+*//*
         ListView list = (ListView)findViewById(R.id.listview);
+*/
 
         //this is a sample data. This could be in whatever form.
         String[] states = {"Alabama", "Alaska", "Arizona", "Arkansas",
@@ -47,8 +51,12 @@ public class MainActivity extends Activity {
         //pass in a context reference. You get a reference o the context in an Activity class by simply using "this".
         OptimizedCustomAdapter adapter = new OptimizedCustomAdapter(this,statesList);
 
+        grid.setAdapter(adapter);
+
         //set the adapter to the ListView object.
+/*
         list.setAdapter(adapter);
+*/
     }
 
     @Override
@@ -62,7 +70,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Log.i(TAG, "::onOptionsItemSelected(ite)");
+        Log.i(TAG, "::onOptionsItemSelected(item)");
 
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
