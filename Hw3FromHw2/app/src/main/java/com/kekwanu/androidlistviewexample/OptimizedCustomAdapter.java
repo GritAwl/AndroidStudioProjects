@@ -26,9 +26,6 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     private int[] sq1Colors;
     private int[] sq2Colors;
 
-    private int evenRowColor;
-    private int oddRowColor;
-
     public OptimizedCustomAdapter(Context context, ArrayList objects) {
         Log.i(TAG, "::OptimizedCustomAdapter(context, objects)");
         this.context = context;
@@ -41,9 +38,6 @@ public class OptimizedCustomAdapter extends BaseAdapter {
             sq1Colors[i] = makeRandomColor();
             sq2Colors[i] = makeRandomColor();
         }
-
-        evenRowColor = makeRandomColor();
-        oddRowColor = makeRandomColor();
     }
 
     //define the Holder pattern class
@@ -55,17 +49,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
      * It should also be used to cache the color of the two squares, the Views.
      */
     static class ViewHolder{
-//        android.util.Log.i("HW2", "::ViewHolder internal class definition");
         TextView state;
-
-        /**
-         * TODO:
-         * Not sure if the following should be here or not. See getCount()
-         * immediately below, as it only returns the size of the states
-         * ArrayList.
-         *
-         * The getView() method below accesses these, so I must have them for now.
-         */
+        TextView bufferSquare;
         View square1;
         View square2;
         ViewGroup rowView;
@@ -86,12 +71,6 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     @Override
     public long getItemId(int position) {
         Log.i(TAG, "::getItemId(position)");
-        /**
-         * This method is never called from this class,
-         * but there is one call in MainActivity.onOptionsItemSelected(item).
-         *
-         * Previously returned 0, modified to return position.
-         */
         return position;
     }
 
@@ -111,9 +90,17 @@ public class OptimizedCustomAdapter extends BaseAdapter {
         View rootView = LayoutInflater.from(context).inflate(R.layout
                 .beautiful_layout_item, viewGroup, false);
 
-
         TextView textView = (TextView) rootView.findViewById(R.id.state);
         textView.setText(states.get(position));
+
+        TextView bufferSquareView = (TextView) rootView.findViewById(R.id.bufferSquare);
+        bufferSquareView.setText(Integer.toString(position));
+
+        View square1View = (View) rootView.findViewById(R.id.square1);
+        square1View.setBackgroundColor(makeRandomColor());
+
+        View square2View = (View) rootView.findViewById(R.id.square2);
+        square2View.setBackgroundColor(makeRandomColor());
 
         return rootView;
     }
@@ -162,29 +149,26 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 //            //laggy scrolling.
 //            viewHolder = new ViewHolder();
 //
-//
 //            viewHolder.state = (TextView) convertView.findViewById(R.id.state);
+//            viewHolder.bufferSquare = (View) convertView.findViewById(R.id.bufferSquare);
 //            viewHolder.square1 = (View) convertView.findViewById(R.id.square1);
 //            viewHolder.square2 = (View) convertView.findViewById(R.id.square2);
 //            viewHolder.rowView = (ViewGroup) convertView.findViewById(R.id.row);
 //
-//
-//
 //            //  Store the ViewHolder with the View.
 //            convertView.setTag(viewHolder);
 //        }
-//
 //
 //        /**
 //         * We avoided calling findViewById() on the resource,
 //         * so just use the ViewHolder.
 //         */
 //
-//
 //        viewHolder = (ViewHolder) convertView.getTag();
 //        viewHolder.state.setText(getItem(position));
 //
 //        ((ViewHolder) convertView.getTag()).state.setText(getItem(position));
+//        ((ViewHolder) convertView.getTag()).bufferSquare.setBackgroundColor(makeRandomColor());
 //        ((ViewHolder) convertView.getTag()).square1.setBackgroundColor(sq1Colors[position]);
 //        ((ViewHolder) convertView.getTag()).square2.setBackgroundColor(sq2Colors[position]);
 //
@@ -194,7 +178,6 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 //            ((ViewHolder) convertView.getTag()).rowView.setBackgroundColor(oddRowColor);
 //        }
 //
-////        return convertView;
 //        return viewGroup;
 //    }
 
