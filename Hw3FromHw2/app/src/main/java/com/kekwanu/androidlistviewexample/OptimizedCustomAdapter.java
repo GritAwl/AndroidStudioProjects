@@ -16,6 +16,53 @@ import java.util.Random;
 /**
  * Created by PSP502AP001 on 10/22/2014.
  */
+
+/*
+Homework3
+
+    Another assignment working with widgets, which are user interface items such as Views.
+
+    Requirements:
+        Display the same data from Homework 2, but with the following differences:
+            1) A GridView must display the data, with appropriate styling
+            2) The GridView must:
+                a) have four (4) columns
+                b) occupy the entire width of the screen, minus edge padding and margins
+            3) Use background colors in each cell, possibly randomly generated
+            4) Change the text color of the state TextView
+            5) Choose a color that looks good on the background color of its cell
+
+    Tips:
+        Practice styling Views and Layouts as much as possible. For inspiration see the
+        Google I/O 2014 app. Browse through it, click on all the menu items,
+        and observe the use of bright colors on their ListViews and GridViews. Also
+        observe the use of padding, margins, and white space.
+
+    Some Android Design Guidelines
+        For margins, use a 16dp value. This matches with Android's "48dp rhythm" design
+        guideline.
+
+    Layout and View Parameters (Info below from the Big Nerd Ranch Guide)
+        Some attribute names begin with "layout_", and others do not.
+
+        Attributes not beginning with "layout_" are directions to the widget. When the
+        widget is inflated, the widget calls a method to configure itself based on each
+        of these attributes and their values.
+
+        Attributes beginning with "layout_" are a direction to the parent of the widget.
+        These are also known as layout parameters. They tell the parent layout how to
+        arrange the child element within the parent.
+
+    Margins vs. Padding
+        Margin attributes are layout parameters. They determine the distance between
+        widgets. Because a widget can only know about itself,
+        the margins are the responsibility of the widget's parent.
+
+        Padding is not a layout parameter. The android:padding attribute tells the
+        widget how much bigger than its contents it should be drawn.
+ */
+
+
 public class OptimizedCustomAdapter extends BaseAdapter {
 
     private String TAG = "HW2::OptimizedCustomAdapter";
