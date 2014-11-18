@@ -2,48 +2,48 @@
 
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:columnCount="4"
-    android:rowCount="50"
-    android:minWidth="@dimen/activity_horizontal_margin"
-    >
+    android:rowCount="50">
+    <!--android:minWidth="@dimen/activity_horizontal_margin"-->
+    <!-->-->
 
     <TextView
         android:id="@+id/state"
-        android:layout_width="96dp"
-        android:layout_height="64dp"
-        android:gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--/>-->
 
     <TextView
         android:id="@+id/bufferSquare"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--/>-->
 
-    <View
+    <TextView
         android:id="@+id/square1"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--/>-->
 
-    <View
+    <TextView
         android:id="@+id/square2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--/>-->
 
     <!-- child views -->
    <!-- <TextView android:text="A 1" android:padding="5dp"/>

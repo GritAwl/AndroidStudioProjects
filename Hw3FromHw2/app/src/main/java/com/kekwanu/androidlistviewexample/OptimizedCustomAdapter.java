@@ -32,11 +32,15 @@ Homework3
             4) Change the text color of the state TextView
             5) Choose a color that looks good on the background color of its cell
 
-    Tips:
-        Practice styling Views and Layouts as much as possible. For inspiration see the
-        Google I/O 2014 app. Browse through it, click on all the menu items,
-        and observe the use of bright colors on their ListViews and GridViews. Also
-        observe the use of padding, margins, and white space.
+    Tips and Google I/O Style Observations:
+        Practice styling Views and Layouts as much as possible. For inspiration browse
+        through this app and click on all the menu items. Google I/O 2014 app
+        observations:
+            use of bright and contrasting colors on their ListViews and GridViews
+            observe the use of padding, margins, and white space
+            white borders around every View
+            always a blatant picture of a person or a hint of a person in every View
+            descriptions are below this person display that is at the top of every View
 
     Some Android Design Guidelines
         For margins, use a 16dp value. This matches with Android's "48dp rhythm" design
@@ -98,8 +102,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
     static class ViewHolder{
         TextView state;
         TextView bufferSquare;
-        View square1;
-        View square2;
+        TextView square1;
+        TextView square2;
         ViewGroup rowView;
     }
 
@@ -141,13 +145,17 @@ public class OptimizedCustomAdapter extends BaseAdapter {
         textView.setText(states.get(position));
 
         TextView bufferSquareView = (TextView) rootView.findViewById(R.id.bufferSquare);
-        bufferSquareView.setText(Integer.toString(position));
+        bufferSquareView.setText(Integer.toString(position % 10));
 
-        View square1View = (View) rootView.findViewById(R.id.square1);
-        square1View.setBackgroundColor(makeRandomColor());
+        TextView square1View = (TextView) rootView.findViewById(R.id.square1);
+        square1View.setText(Integer.toString(position % 10));
 
-        View square2View = (View) rootView.findViewById(R.id.square2);
-        square2View.setBackgroundColor(makeRandomColor());
+//        square1View.setBackgroundColor(makeRandomColor());
+
+        TextView square2View = (TextView) rootView.findViewById(R.id.square2);
+        square2View.setText(Integer.toString(position % 10));
+
+//        square2View.setBackgroundColor(makeRandomColor());
 
         return rootView;
     }
