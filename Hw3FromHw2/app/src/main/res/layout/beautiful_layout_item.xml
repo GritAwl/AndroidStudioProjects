@@ -7,7 +7,6 @@
     android:columnCount="4"
     android:rowCount="50"
     >
-    <!--android:minWidth="@dimen/activity_horizontal_margin"-->
 
     <TextView
         android:id="@+id/state"
@@ -16,32 +15,23 @@
         android:layout_margin="16dp"
         android:background="@color/yellowWith50PercentAlpha"
         />
-        <!--android:gravity="center"-->
-        <!--android:layout_marginLeft="16dp"-->
-        <!--android:layout_marginRight="16dp"-->
-        <!--/>-->
 
     <TextView
         android:id="@+id/bufferSquare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@color/royalBlueWith50PercentAlpha"/>
-        <!--android:gravity="center"-->
-        <!--android:layout_marginLeft="16dp"-->
-        <!--android:layout_marginRight="16dp"-->
-        <!--/>-->
+        android:background="@color/royalBlueWith50PercentAlpha"
+        />
+
 
     <TextView
         android:id="@+id/square1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@color/oliveWith50PercentAlpha"/>
-        <!--android:gravity="center"-->
-        <!--android:layout_marginLeft="16dp"-->
-        <!--android:layout_marginRight="16dp"-->
-        <!--/>-->
+        android:background="@color/oliveWith50PercentAlpha"
+        />
 
     <TextView
         android:id="@+id/square2"
@@ -50,54 +40,5 @@
         android:layout_margin="16dp"
         android:background="@color/flameWith50PercentAlpha"
         />
-        <!--android:gravity="center"-->
-        <!--android:layout_marginLeft="16dp"-->
-        <!--android:layout_marginRight="16dp"-->
-        <!--/>-->
-
-    <!-- child views -->
-   <!-- <TextView android:text="A 1" android:padding="5dp"/>
-    <TextView android:text="A 2" android:padding="5dp"/>
-    <TextView android:text="A 3" android:padding="5dp"/>
-    <TextView android:text="A 4" android:padding="5dp"/>
-    <TextView android:text="B 1" android:padding="5dp"/>
-    <TextView android:text="B 2" android:padding="5dp"/>
-    <TextView android:text="B 3" android:padding="5dp"/>
-    <TextView android:text="B 4" android:padding="5dp"/>
-    <TextView android:text="C 1" android:padding="5dp"/>
-    <TextView android:text="C 2" android:padding="5dp"/>
-    <TextView android:text="C 3" android:padding="5dp"/>
-    <TextView android:text="C 4" android:padding="5dp"/>
-    <TextView android:text="D 1" android:padding="5dp"/>
-    <TextView android:text="D 2" android:padding="5dp"/>
-    <TextView android:text="D 3" android:padding="5dp"/>
-    <TextView android:text="D 4" android:padding="5dp"/>
--->
-
-    <!--<LinearLayout
-        android:id="@+id/row"
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        >
-
-        <TextView
-            android:id="@+id/state"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp" />
-
-        <View
-            android:id="@+id/square1"
-            android:layout_width="64dp"
-            android:layout_height="64dp" />
-
-        <View
-            android:id="@+id/square2"
-            android:layout_width="64dp"
-            android:layout_height="64dp" />
-
-    </LinearLayout>
--->
 
 </GridLayout>
