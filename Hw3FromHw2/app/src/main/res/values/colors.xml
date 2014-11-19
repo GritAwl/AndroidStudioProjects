@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
     <resources>
+    <color name="gMatRed100PAlpha">#FFF44336</color>
+    <color name="gMatPink100PAlpha">#FFE91E63</color>
+    <color name="gMatPurple100PAlpha">#FF9C27B0</color>
+    <color name="gMatDeepPurple100PAlpha">#FF673AB7</color>
+    <color name="gMatIndige100PAlpha">#FF3F51B5</color>
+    <color name="gMatBlue100PAlpha">#FF2196F3</color>
+    <color name="gMatLightBlue100PAlpha">#FF03A9F4</color>
+    <color name="gMatCyan100PAlpha">#FF00BCD4</color>
+    <color name="gMatTeal100PAlpha">#FF009688</color>
+    <color name="gMatGreen100PAlpha">#FF4CAF50</color>
+    <color name="gMatLightGreen100PAlpha">#FF8BC34A</color>
+    <color name="gMatLime100PAlpha">#FFCDDC39</color>
+    <color name="gMatYellow100PAlpha">#FFFFEB3B</color>
+    <color name="gMatAmber100PAlpha">#FFFFC107</color>
+    <color name="gMatOrange100PAlpha">#FFFF9800</color>
+    <color name="gMatDeepOrange100PAlpha">#FFFF5722</color>
+    <color name="gMatBrown100PAlpha">#FF795548</color>
+    <color name="gMatGrey100PAlpha">#FF9E9E9E</color>
+    <color name="gMatBlueGrey100PAlpha">#FF607D8B</color>
+    <color name="gMatBlack100PAlpha">#FF000000</color>
+    <color name="gMatWhite100PAlpha">#FFFFFFFF</color>
+
     <color name="gGlassWhite100PAlpha">#FFFFFFFF</color>
     <color name="gGlassGray100PAlpha">#FF808080</color>
     <color name="gGlassBlue100PAlpha">#FF34a7ff</color>
