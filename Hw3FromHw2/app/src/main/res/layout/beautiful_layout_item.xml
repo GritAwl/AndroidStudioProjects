@@ -6,39 +6,46 @@
     android:layout_height="match_parent"
     android:columnCount="4"
     android:rowCount="50"
+    android:background="@color/white50PAlpha"
     >
 
     <TextView
         android:id="@+id/state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/yellowWith50PercentAlpha"
-        />
+        android:layout_gravity="left"
+        android:textColor="@color/fireBrick100PAlpha"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="@dimen/stateTextSize"/>
 
     <TextView
         android:id="@+id/bufferSquare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/royalBlueWith50PercentAlpha"
-        />
-
+        android:layout_gravity="left|right"
+        android:layout_margin="8dp"
+        android:textSize="@dimen/stateTextSize"/>
+    />
 
     <TextView
         android:id="@+id/square1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/oliveWith50PercentAlpha"
-        />
+        android:background="@color/olive50PAlpha"
+        android:gravity="end"
+        android:layout_margin="8dp"
+        android:textSize="@dimen/stateTextSize"/>
+    />
 
     <TextView
         android:id="@+id/square2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/flameWith50PercentAlpha"
-        />
+        android:background="@color/flame50PAlpha"
+        android:gravity="end"
+        android:layout_margin="8dp"
+        android:textSize="@dimen/stateTextSize"/>
+    />
 
 </GridLayout>
