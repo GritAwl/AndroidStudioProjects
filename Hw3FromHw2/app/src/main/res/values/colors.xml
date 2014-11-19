@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
     <resources>
-        <color name="redWith50PercentAlpha">#66FF0000</color>
-        <color name="greenWith50PercentAlpha">#6600FF00</color>
-        <color name="blueWith50PercentAlpha">#660000FF</color>
-        <color name="blackWith50PercentAlpha">#66000000</color>
-        <color name="whiteWith50PercentAlpha">#66FFFFFF</color>
-
+    <color name="armyGreenWith50PercentAlpha">#664B5320</color>
+    <color name="avocadoBrickWith50PercentAlpha">#66568203</color>
+    <color name="blackWith50PercentAlpha">#66000000</color>
+    <color name="blueWith50PercentAlpha">#660000FF</color>
+    <color name="brightGreenWith50PercentAlpha">#6666FF00</color>
+    <color name="fireBrickWith50PercentAlpha">#66B22222</color>
+    <color name="flameWith50PercentAlpha">#66E25822</color>
+    <color name="fuchsiaWith50PercentAlpha">#66FD3F92</color>
+    <color name="greenWith50PercentAlpha">#6600FF00</color>
+    <color name="maroonWith50PercentAlpha">#66800000</color>
+    <color name="oliveWith50PercentAlpha">#66808000</color>
+    <color name="orangeWith50PercentAlpha">#66FF6600</color>
+    <color name="purpleWith50PercentAlpha">#66800080</color>
+    <color name="redWith50PercentAlpha">#66FF0000</color>
+    <color name="royalBlueWith50PercentAlpha">#66002366</color>
+    <color name="tealWith50PercentAlpha">#66008080</color>
+    <color name="tyrianPurpleWith50PercentAlpha">#6666023C</color>
+    <color name="whiteWith50PercentAlpha">#66FFFFFF</color>
+    <color name="yellowWith50PercentAlpha">#66FFFF00</color>
 </resources>

@@ -69,7 +69,7 @@ Homework3
 
 public class OptimizedCustomAdapter extends BaseAdapter {
 
-    private String TAG = "HW2::OptimizedCustomAdapter";
+    private String TAG = "HW3::OptimizedCustomAdapter";
     private ArrayList<String> states;
     private Activity activity;
     private Context context;
@@ -246,7 +246,7 @@ public class OptimizedCustomAdapter extends BaseAdapter {
      * this class. This is referred to as a static nested class.
      */
     static int makeRandomColor() {
-        String TAG = "HW2";
+        String TAG = "HW3";
         Random r = new Random();
 
         int AA = r.nextInt(255);

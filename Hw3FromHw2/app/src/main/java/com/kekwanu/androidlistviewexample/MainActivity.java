@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class MainActivity extends Activity {
 
-    private String TAG = "HW2::MainActivity";
+    private String TAG = "HW3::MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +30,14 @@ public class MainActivity extends Activity {
 */
 
         //this is a sample data. This could be in whatever form.
-        String[] states = {"Alabama", "Alaska", "Arizona", "Arkansas",
-                "California", "Colorado", "Connecticut", "Delaware",
-                "Florida", "Georgia", "Hawaii", "Idaho", "Illinois",
-                "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
-                "Maine", "Maryland", "Massachusetts", "Michigan",
-                "Minnesota", "Mississippi", "Missouri", "Montana",
-                "Nebraska", "Nevada", "New Hampshire", "New Jersey",
-                "New Mexico", "New York", "North Carolina",
-                "North Dakota", "Ohio", "Oklahoma", "Oregon",
-                "Pennsylvania", "Rhode Island", "South Carolina",
-                "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
-                "Virginia", "Washington", "West Virginia", "Wisconsin",
-                "Wyoming"};
+        String[] states = {"Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+                "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho",
+                "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
+                "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
+                "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina",
+                "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+                "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+                "West Virginia", "Wisconsin", "Wyoming"};
 
         //I just prefer to work with ArrayList objects. Any Array type is fine.
         ArrayList statesList = new ArrayList<String>(Arrays.asList(states));
