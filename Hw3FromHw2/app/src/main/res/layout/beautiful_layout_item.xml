@@ -7,7 +7,7 @@
     android:columnCount="4"
     android:rowCount="50"
     android:background="@color/white50PAlpha"
-    >
+    android:id="@+id/">
 
     <TextView
         android:id="@+id/state"
@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:textColor="@color/fireBrick100PAlpha"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:textSize="@dimen/stateTextSize"/>
+        android:textSize="@dimen/stateTextSize"
+        />
 
     <TextView
         android:id="@+id/bufferSquare"
@@ -26,7 +27,7 @@
         android:layout_gravity="left|right"
         android:layout_margin="8dp"
         android:textSize="@dimen/stateTextSize"/>
-    />
+        />
 
     <TextView
         android:id="@+id/square1"
@@ -34,9 +35,10 @@
         android:layout_height="wrap_content"
         android:background="@color/olive50PAlpha"
         android:gravity="end"
-        android:layout_margin="8dp"
-        android:textSize="@dimen/stateTextSize"/>
-    />
+        android:width="@dimen/coloredSquareSize"
+        android:height="@dimen/coloredSquareSize"
+        android:layout_marginLeft="8dp"/>
+        />
 
     <TextView
         android:id="@+id/square2"
@@ -44,8 +46,10 @@
         android:layout_height="wrap_content"
         android:background="@color/flame50PAlpha"
         android:gravity="end"
-        android:layout_margin="8dp"
-        android:textSize="@dimen/stateTextSize"/>
-    />
+        android:width="@dimen/coloredSquareSize"
+        android:height="@dimen/coloredSquareSize"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"/>
+        />
 
 </GridLayout>
