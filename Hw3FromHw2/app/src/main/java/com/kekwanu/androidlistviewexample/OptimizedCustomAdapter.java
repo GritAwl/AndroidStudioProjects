@@ -177,7 +177,8 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 //         * If no view is given to us, create one.
 //         * Don't put data into the views here, just specify how to find the views.
 //         */
-//
+////            convertView = inflater.inflate(R.layout.beautiful_layout_item, viewGroup,
+//                    false);
 //        if (convertView == null){ //the first time around, the view is null, so inflate it
 //
 //
