@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:columnCount="4"
     android:rowCount="50"
-    android:background="@color/gGlassGray100PAlpha"
+    android:background="@color/primary500Indigo100PAlpha"
     >
 
     <TextView
@@ -14,12 +14,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:textColor="@color/gGlassWhite100PAlpha"
+        android:textColor="@color/textOnWhiteBackground"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:textSize="@dimen/stateTextSize"
         android:focusable="false"
-        android:typeface="sans"/>
+        android:typeface="sans"
+        />
 
     <TextView
         android:id="@+id/bufferSquare"
@@ -27,30 +28,31 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left|right"
         android:layout_margin="8dp"
-        android:textSize="@dimen/stateTextSize"/>
+        android:textSize="@dimen/stateTextSize"
         />
+
 
     <TextView
         android:id="@+id/square1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/gGlassRed100PAlpha"
+        android:background="@color/accentA200Pink100PAlpha"
         android:gravity="end"
         android:width="@dimen/coloredSquareSize"
         android:height="@dimen/coloredSquareSize"
-        android:layout_marginLeft="8dp"/>
+        android:layout_marginLeft="8dp"
         />
 
     <TextView
         android:id="@+id/square2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/gGlassGreen100PAlpha"
+        android:background="@color/accentA100Pink100PAlpha"
         android:gravity="end"
         android:width="@dimen/coloredSquareSize"
         android:height="@dimen/coloredSquareSize"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
         />
 
 </GridLayout>
