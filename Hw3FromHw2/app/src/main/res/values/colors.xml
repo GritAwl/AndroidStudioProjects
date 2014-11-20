@@ -11,14 +11,14 @@
         <color name="primary500Indigo100PAlpha">#FF3F51B5</color>
         <color name="primary100Indigo100PAlpha">#FFC5CAE9</color>
         <!--Status bar should be the darker 700 tint of the primary color-->
-        <color name="primary700Indigo100PAlpha">#FF303F9F</color>
+            <color name="primary700Indigo100PAlpha">#FF303F9F</color>
 
     <!--Secondary color palette:-->
         <color name="accentA200Pink100PAlpha">#FFFF4081</color>
         <color name="accentA100Pink100PAlpha">#FFFF80AB</color>
 
         <!--Fallback:-->
-        <color name="accentA400Pink100PAlpha">#FFF50057</color>
+            <color name="accentA400Pink100PAlpha">#FFF50057</color>
 
     <!--Standard alpha for text on white background:-->
         <color name="textOnWhiteBackground">#DB000000</color>
@@ -27,35 +27,35 @@
         <color name="secondaryText">#8B000000</color>
 
     <!--Text hints, even lower in the hierarchy:-->
-    <color name="textHints">#41000000</color>
+        <color name="textHints">#41000000</color>
 
     <!--Icons and dividers colored to be viewable on any background:-->
-    <color name="dividers">#1C000000</color>
+        <color name="dividers">#1C000000</color>
 
-    <!--<color name="gMatRed100PAlpha">#FFF44336</color>-->
-        <!--<color name="gMatPink100PAlpha">#FFE91E63</color>-->
-        <!--<color name="gMatPurple100PAlpha">#FF9C27B0</color>-->
-        <!--<color name="gMatDeepPurple100PAlpha">#FF673AB7</color>-->
-        <!--<color name="gMatIndigo100PAlpha">#FF3F51B5</color>-->
-        <!--<color name="gMatBlue100PAlpha">#FF2196F3</color>-->
-        <!--<color name="gMatLightBlue100PAlpha">#FF03A9F4</color>-->
-        <!--<color name="gMatCyan100PAlpha">#FF00BCD4</color>-->
-        <!--<color name="gMatTeal100PAlpha">#FF009688</color>-->
-        <!--<color name="gMatGreen100PAlpha">#FF4CAF50</color>-->
-        <!--<color name="gMatLightGreen100PAlpha">#FF8BC34A</color>-->
-        <!--<color name="gMatLime100PAlpha">#FFCDDC39</color>-->
-        <!--<color name="gMatYellow100PAlpha">#FFFFEB3B</color>-->
-        <!--<color name="gMatAmber100PAlpha">#FFFFC107</color>-->
-        <!--<color name="gMatOrange100PAlpha">#FFFF9800</color>-->
+        <color name="gMatRed100PAlpha">#FFF44336</color>
+        <color name="gMatPink100PAlpha">#FFE91E63</color>
+        <color name="gMatPurple100PAlpha">#FF9C27B0</color>
+        <color name="gMatDeepPurple100PAlpha">#FF673AB7</color>
+        <color name="gMatIndigo100PAlpha">#FF3F51B5</color>
+        <color name="gMatBlue100PAlpha">#FF2196F3</color>
+        <color name="gMatLightBlue100PAlpha">#FF03A9F4</color>
+        <color name="gMatCyan100PAlpha">#FF00BCD4</color>
+        <color name="gMatTeal100PAlpha">#FF009688</color>
+        <color name="gMatGreen100PAlpha">#FF4CAF50</color>
+        <color name="gMatLightGreen100PAlpha">#FF8BC34A</color>
+        <color name="gMatLime100PAlpha">#FFCDDC39</color>
+        <color name="gMatYellow100PAlpha">#FFFFEB3B</color>
+        <color name="gMatAmber100PAlpha">#FFFFC107</color>
+        <color name="gMatOrange100PAlpha">#FFFF9800</color>
 
-    <!--<color name="gMatDeepOrange100PAlpha">#FFFF5722</color>-->
-    <!--<color name="gMatBrown100PAlpha">#FF795548</color>-->
-    <!--<color name="gMatGrey100PAlpha">#FF9E9E9E</color>-->
-    <!--<color name="gMatBlueGrey100PAlpha">#FF607D8B</color>-->
-    <!--<color name="gMatWhite100PAlpha">#FFFFFFFF</color>-->
+        <color name="gMatDeepOrange100PAlpha">#FFFF5722</color>
+        <color name="gMatBrown100PAlpha">#FF795548</color>
+        <color name="gMatGrey100PAlpha">#FF9E9E9E</color>
+        <color name="gMatBlueGrey100PAlpha">#FF607D8B</color>
+        <color name="gMatWhite100PAlpha">#FFFFFFFF</color>
 
-    <!--<color name="gMatBlack100PAlpha">#FF000000</color>-->
-    <!--<color name="gMatBlack54PAlpha">#8B000000</color>-->
+        <color name="gMatBlack100PAlpha">#FF000000</color>
+        <color name="gMatBlack54PAlpha">#8B000000</color>
 
     <!--<color name="gGlassWhite100PAlpha">#FFFFFFFF</color>-->
     <!--<color name="gGlassGray100PAlpha">#FF808080</color>-->
@@ -86,41 +86,5 @@
     <!--<color name="tyrianPurple50PAlpha">#6666023C</color>-->
     <!--<color name="white50PAlpha">#66FFFFFF</color>-->
     <!--<color name="yellow50PAlpha">#66FFFF00</color> name="gMatDeepOrange100PAlpha">#FFFF5722</color>-->
-        <!--<color name="gMatBrown100PAlpha">#FF795548</color>-->
-        <!--<color name="gMatGrey100PAlpha">#FF9E9E9E</color>-->
-        <!--<color name="gMatBlueGrey100PAlpha">#FF607D8B</color>-->
-        <!--<color name="gMatWhite100PAlpha">#FFFFFFFF</color>-->
 
-        <!--<color name="gMatBlack100PAlpha">#FF000000</color>-->
-        <!--<color name="gMatBlack54PAlpha">#8B000000</color>-->
-
-        <!--<color name="gGlassWhite100PAlpha">#FFFFFFFF</color>-->
-        <!--<color name="gGlassGray100PAlpha">#FF808080</color>-->
-        <!--<color name="gGlassBlue100PAlpha">#FF34a7ff</color>-->
-        <!--<color name="gGlassRed100PAlpha">#FFcc3333</color>-->
-        <!--<color name="gGlassGreen100PAlpha">#FF99cc33</color>-->
-        <!--<color name="gGlassYellow100PAlpha">#FFddbb11</color>-->
-
-        <!--<color name="armyGreen50PAlpha">#664B5320</color>-->
-        <!--<color name="avocado50PAlpha">#66568203</color>-->
-        <!--<color name="black50PAlpha">#66000000</color>-->
-        <!--<color name="blue50PAlpha">#660000FF</color>-->
-        <!--<color name="brightGreen50PAlpha">#6666FF00</color>-->
-        <!--<color name="fireBrick50PAlpha">#66B22222</color>-->
-        <!--<color name="fireBrick100PAlpha">#FFB22222</color>-->
-        <!--<color name="flame50PAlpha">#66E25822</color>-->
-        <!--<color name="fuchsia50PAlpha">#66FD3F92</color>-->
-        <!--<color name="green50PAlpha">#6600FF00</color>-->
-        <!--<color name="maroon50PAlpha">#66800000</color>-->
-        <!--<color name="olive50PAlpha">#66808000</color>-->
-        <!--<color name="orange50PAlpha">#66FF6600</color>-->
-        <!--<color name="orange75PAlpha">#AAFF6600</color>-->
-        <!--<color name="orange100PAlpha">#FFFF6600</color>-->
-        <!--<color name="purple50PAlpha">#66800080</color>-->
-        <!--<color name="red50PAlpha">#66FF0000</color>-->
-        <!--<color name="royalBlue50PAlpha">#66002366</color>-->
-        <!--<color name="teal50PAlpha">#66008080</color>-->
-        <!--<color name="tyrianPurple50PAlpha">#6666023C</color>-->
-        <!--<color name="white50PAlpha">#66FFFFFF</color>-->
-        <!--<color name="yellow50PAlpha">#66FFFF00</color>-->
 </resources>

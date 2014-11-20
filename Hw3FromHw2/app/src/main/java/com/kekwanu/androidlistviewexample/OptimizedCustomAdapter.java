@@ -143,19 +143,16 @@ public class OptimizedCustomAdapter extends BaseAdapter {
 
         TextView textView = (TextView) rootView.findViewById(R.id.state);
         textView.setText(states.get(position));
+        textView.setBackgroundColor(makeRandomColor());
 
         TextView bufferSquareView = (TextView) rootView.findViewById(R.id.bufferSquare);
-//        bufferSquareView.setText(Integer.toString(position % 10));
+        bufferSquareView.setBackgroundColor(makeRandomColor());
 
         TextView square1View = (TextView) rootView.findViewById(R.id.square1);
-        square1View.setText("  ");
-
-//        square1View.setBackgroundColor(makeRandomColor());
+        square1View.setBackgroundColor(makeRandomColor());
 
         TextView square2View = (TextView) rootView.findViewById(R.id.square2);
-        square2View.setText("  ");
-
-//        square2View.setBackgroundColor(makeRandomColor());
+        square2View.setBackgroundColor(makeRandomColor());
 
         return rootView;
     }
