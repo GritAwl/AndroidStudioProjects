@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword 'android'
+            storeFile file('/Users/lukebay/keystores/android.jks')
+            storePassword 'android'
+        }
+    }
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
     defaultConfig {
@@ -11,9 +19,13 @@ android {
         versionName "1.0"
     }
     buildTypes {
+//        release {
+//            apply plugin: 'java'
+//            runProguard false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
         release {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     productFlavors {
@@ -21,5 +33,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
