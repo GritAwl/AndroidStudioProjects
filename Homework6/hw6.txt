@@ -1,0 +1,18 @@
+Ok folks, hope you're still having fun! For homework 6, as usual we are building on where we left off. Build a login screen to your homework5 project. The requirements are as detailed below:
+
+- When the user launches the app for the first time, instead of launching your Activity with the grid/listview from homework 5, present a login screen, with a name input field, email input field and password input field, and ofcourse a submit button.
+
+- When the user enters the requested information, then launch the main screen (i.e. homework5 Activity).
+
+- The next time a user launches the app, you should build in logic to determine if the user has logged in before. If they have previously logged in, present the homework 5 Activity immediatly. If not, present the login screen again. 
+
+Note --You must use either method we learned in Wk 7's storage class to presist the login data. You will need to read this data whenever the app launches, to determine which screen to present the user.
+
+For extra points (up to 10 extra points, plus bragging rights), enable a logout button on the main screen. When this button is clicked, you should log out your user. Logging means clearing the saved login data, as well as closing the currencly displayed Activity, and moving to the login screen. Additionally, you may also display an initial "welcome xxxx" on the first login, where xxx is the name the user entered on the login screen. Do this only the first time (hint: to get this done, you'll need to persist a login_count data). Get creative!
+
+Due to the thanksgiving holidays, you have two weeks to work on this. Hopefully this homework will help many of you with your project as well, as there are login/logout requirements in many of the projects I have seen.
+
+Additionally, for this homework 6, you do not need to check any login credentials, just assume the username/email etc are correct. In a real life scenerio, you'd be checking the credentials against a user database.
+
+
+Happy Thanksgiving!
