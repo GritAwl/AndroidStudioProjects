@@ -1,0 +1,15 @@
+Let's continue our progress. For this homework, let's build other Activities which can be launched from your current one Activity homeworks. You may use any of the previous homeworks, preferably use either of the last homeworks with a ListView or GridView. The requirements for this homework is as follows:
+
+- Must have at least three Activities, includign the main/launcher Activity.
+- Every Activity must have a non-default ActionBar. i.e. style your ActionBar with colors, texture or a different background than the default.
+- You may open up the new Activity(ies) from any action on the Activity. i.e. from menus, or clicking on any UI element on the Activity. It's totally up to you.
+
+- The opened up ACtivity must be logically related to the action. i.e. if you are doing US states, clicking on California must open up an Activity that details something about California. 
+
+- Each new Activity must have an up button, where the user can navigate up to the previous activity.
+
+Here is a good reading on the Up vs Back button. http://devel​oper.android.com/des​ign/patterns/navigat​ion.html
+
+Back button is provided by default in Android. You will have to implement the Up button for newly opened Activities, as demonstrated in class.
+
+Happy coding!

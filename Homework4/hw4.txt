@@ -1,0 +1,8 @@
+For this homework, you are going to interact with the views on your GridView from Homework3 via action buttons on your ActionBar. Use your GridView from homework 3
+
+1 - Add an action button with an icon to your ActionBar. Choose an appropriate icon for your action button.
+
+2 - The action button, when clicked, will create an animation of any view object within a randomly selected cell in the GridView. Feel free to create any animation!
+
+3 - Your action button should animate a property (or properties) of a random cell in your GridView, when clicked E.g. animate the background color of a random cell, animate the color of the squares within the cells, animate the position of the squares, etc.
+4 - Bonus points (extra 10 points): create another action button for "advanced" anumation, which will create an animation that loops through the entire grid. i.e. the requirement is to animate just one random cell in the grid. This bonus wil create various forms of animations across the grid. Ps --don't be bothered anout the chaos that will create! Oviously, if you can slowly or ordely animate all the views, that's ok as well.
