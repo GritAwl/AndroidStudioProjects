@@ -1,0 +1,7 @@
+essential tools:
+android
+Android Emulator
+Android Debug Bridge
+Gradle
+Keytool
+Jarsigner
