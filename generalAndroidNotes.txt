@@ -1,0 +1,2 @@
+sp for font sizes
+dp for all other sizes including margins, etc
